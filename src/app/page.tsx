@@ -1,149 +1,195 @@
-import Image from "next/image";
-
 export default function Home() {
+  const menu = [
+    {
+      icon: "🍔",
+      name: "Royal Burger",
+      desc: "Juicy grilled burger with premium cheese and fresh vegetables.",
+    },
+    {
+      icon: "🍕",
+      name: "Cheesy Pizza",
+      desc: "Loaded with mozzarella cheese and delicious toppings.",
+    },
+    {
+      icon: "🍟",
+      name: "Crispy Fries",
+      desc: "Golden crispy fries served with our special sauces.",
+    },
+  ];
+
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-black text-white">
+
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <span className="bg-yellow-500 text-black px-4 py-1 rounded-full font-semibold">
-            Premium Fast Food
+      <section className="relative overflow-hidden py-24 px-6">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(251,191,36,0.15),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(168,85,247,0.2),transparent_40%)]"></div>
+
+        <div className="relative max-w-6xl mx-auto text-center">
+          <span className="bg-amber-400 text-black px-5 py-2 rounded-full font-semibold">
+            👑 Premium Fast Food
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-extrabold mt-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold mt-8 leading-tight">
             Welcome to{" "}
-            <span className="text-yellow-400">WowEats</span>
+            <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              WowEats
+            </span>
           </h1>
 
-          <p className="text-gray-300 mt-6 text-lg leading-8">
-            Experience the royal taste of juicy burgers, cheesy pizzas,
-            crispy fried chicken, crunchy fries and refreshing drinks.
-            Every bite is prepared with premium ingredients and lots of love.
+          <p className="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-8">
+            Taste the perfect combination of juicy burgers, cheesy pizzas,
+            crispy fries and refreshing drinks. Every meal is prepared with
+            premium ingredients to deliver a truly royal dining experience.
           </p>
 
-          <div className="mt-8 flex gap-4">
-            <button className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
-              Order Now
+          <div className="mt-10 flex justify-center gap-4 flex-wrap">
+            <button className="px-8 py-3 rounded-xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-xl hover:scale-105 transition">
+              🍔 Order Now
             </button>
 
-            <button className="border border-yellow-500 text-yellow-400 px-6 py-3 rounded-lg hover:bg-yellow-500 hover:text-black transition">
+            <button className="px-8 py-3 rounded-xl border border-amber-400 text-amber-300 hover:bg-amber-400 hover:text-black transition">
               View Menu
             </button>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700"
-            alt="Burger"
-            width={400}
-            height={400}
-            className="rounded-2xl object-cover h-72"
-          />
-
-          <Image
-            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700"
-            alt="Pizza"
-            width={400}
-            height={400}
-            className="rounded-2xl object-cover h-72 mt-10"
-          />
-        </div>
       </section>
 
       {/* About */}
-      <section className="bg-zinc-900 py-16">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-yellow-400">
-            Why Choose WowEats?
-          </h2>
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-amber-300 to-orange-500 bg-clip-text text-transparent">
+          Why Choose WowEats?
+        </h2>
 
-          <p className="mt-6 text-gray-300 max-w-3xl mx-auto leading-8">
-            At WowEats, we serve fresh, delicious, and premium-quality fast
-            food. From mouth-watering burgers to cheesy pizzas and crispy
-            fried chicken, every meal is crafted to satisfy your cravings.
-          </p>
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="bg-slate-900/80 backdrop-blur-md border border-amber-400/30 rounded-2xl p-6 shadow-xl hover:-translate-y-2 transition">
+            <h3 className="text-2xl font-bold text-amber-400">
+              🥩 Fresh Ingredients
+            </h3>
+            <p className="text-gray-300 mt-4">
+              Every meal is prepared using fresh ingredients to ensure the best
+              quality and unforgettable taste.
+            </p>
+          </div>
+
+          <div className="bg-slate-900/80 backdrop-blur-md border border-amber-400/30 rounded-2xl p-6 shadow-xl hover:-translate-y-2 transition">
+            <h3 className="text-2xl font-bold text-amber-400">
+              👨‍🍳 Expert Chefs
+            </h3>
+            <p className="text-gray-300 mt-4">
+              Our skilled chefs prepare every burger, pizza and fries with care
+              to satisfy your cravings.
+            </p>
+          </div>
+
+          <div className="bg-slate-900/80 backdrop-blur-md border border-amber-400/30 rounded-2xl p-6 shadow-xl hover:-translate-y-2 transition">
+            <h3 className="text-2xl font-bold text-amber-400">
+              🚀 Fast Delivery
+            </h3>
+            <p className="text-gray-300 mt-4">
+              Hot, fresh and delicious food delivered quickly right to your
+              doorstep.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Menu */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-center text-yellow-400 mb-12">
-          Popular Menu
+      {/* Popular Menu */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-amber-300 to-orange-500 bg-clip-text text-transparent">
+          Our Popular Menu
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Royal Burger",
-              img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700",
-            },
-            {
-              name: "Cheesy Pizza",
-              img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700",
-            },
-            {
-              name: "Crispy Fries",
-              img: "https://images.unsplash.com/photo-1576107232684-1279f390859f?w=700",
-            },
-          ].map((item) => (
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          {menu.map((item) => (
             <div
               key={item.name}
-              className="bg-zinc-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition"
+              className="bg-slate-900/80 border border-amber-400/30 rounded-2xl p-8 text-center shadow-xl hover:scale-105 transition"
             >
-              <Image
-                src={item.img}
-                alt={item.name}
-                width={400}
-                height={250}
-                className="w-full h-56 object-cover"
-              />
+              <div className="text-6xl">{item.icon}</div>
 
-              <div className="p-5">
-                <h3 className="text-2xl font-bold text-yellow-400">
-                  {item.name}
-                </h3>
+              <h3 className="text-2xl font-bold text-amber-400 mt-5">
+                {item.name}
+              </h3>
 
-                <p className="text-gray-300 mt-3">
-                  Freshly prepared with premium ingredients and unforgettable
-                  taste.
-                </p>
+              <p className="text-gray-300 mt-4">{item.desc}</p>
 
-                <button className="mt-5 bg-yellow-500 text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-400">
-                  Order Now
-                </button>
-              </div>
+              <button className="mt-6 bg-gradient-to-r from-amber-400 to-orange-500 text-black px-6 py-2 rounded-lg font-bold hover:scale-105 transition">
+                Order Now
+              </button>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-yellow-500 text-black py-16">
-        <div className="max-w-5xl mx-auto text-center px-6">
+      {/* Special Offer */}
+      <section className="max-w-5xl mx-auto px-6 py-10">
+        <div className="rounded-3xl bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-black text-center p-10 shadow-2xl">
           <h2 className="text-4xl font-bold">
-            Hungry? Your Favorite Meal Awaits!
+            🔥 Special Combo Offer
           </h2>
 
           <p className="mt-4 text-lg">
-            Enjoy delicious burgers, pizzas, fries, fried chicken and refreshing
-            drinks at WowEats. Order now and taste the difference.
+            Buy 1 Royal Burger and get Crispy Fries with a Cold Drink at a
+            special discount. Limited Time Only!
           </p>
 
-          <button className="mt-8 bg-black text-yellow-400 px-8 py-3 rounded-lg font-bold hover:bg-zinc-900">
-            Explore Menu
+          <button className="mt-6 bg-black text-amber-400 px-8 py-3 rounded-xl font-bold hover:bg-slate-900 transition">
+            Grab the Deal
           </button>
         </div>
       </section>
 
+      {/* Food Facts */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-amber-300 to-orange-500 bg-clip-text text-transparent">
+          Why Our Food?
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="bg-slate-900 p-6 rounded-2xl border border-amber-400/30">
+            <h3 className="text-xl font-bold text-amber-400">
+              🍔 Premium Burgers
+            </h3>
+            <p className="mt-3 text-gray-300">
+              Soft buns, juicy patties and fresh vegetables create the perfect
+              burger experience.
+            </p>
+          </div>
+
+          <div className="bg-slate-900 p-6 rounded-2xl border border-amber-400/30">
+            <h3 className="text-xl font-bold text-amber-400">
+              🍕 Cheesy Pizzas
+            </h3>
+            <p className="mt-3 text-gray-300">
+              Loaded with rich mozzarella cheese and delicious toppings for
+              every pizza lover.
+            </p>
+          </div>
+
+          <div className="bg-slate-900 p-6 rounded-2xl border border-amber-400/30">
+            <h3 className="text-xl font-bold text-amber-400">
+              🍟 Crispy Fries
+            </h3>
+            <p className="mt-3 text-gray-300">
+              Freshly fried golden fries served with tasty sauces that make
+              every bite unforgettable.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-black border-t border-zinc-800 py-8">
-        <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <h3 className="text-2xl font-bold text-yellow-400">WowEats</h3>
-          <p className="mt-3">
-            Serving Happiness One Bite at a Time.
+      <footer className="bg-slate-950 border-t border-amber-500/30 py-8 mt-12">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-300 to-orange-500 bg-clip-text text-transparent">
+            WowEats
+          </h2>
+
+          <p className="text-gray-400 mt-3">
+            Serving Happiness One Bite at a Time 🍔
           </p>
-          <p className="mt-5 text-sm">
+
+          <p className="text-gray-500 text-sm mt-2">
             © 2026 WowEats. All Rights Reserved.
           </p>
         </div>
